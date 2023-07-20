@@ -48,6 +48,15 @@
         app:layout_constraintEnd_toEndOf="@id/nameValueTextView"
         app:layout_constraintStart_toStartOf="@id/guideLine" />
 
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/baseline_local_phone_24"
+        app:layout_constraintBottom_toBottomOf="@id/emergencyContactTextView"
+        app:layout_constraintEnd_toEndOf="@id/nameValueTextView"
+        app:layout_constraintTop_toTopOf="@id/emergencyContactValueTextView" />
+
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guideLine"
         android:layout_width="wrap_content"
@@ -97,19 +106,12 @@
         style="@style/Value"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
         android:text="0000-0000-0000"
         app:layout_constraintBaseline_toBaselineOf="@id/emergencyContactTextView"
-        app:layout_constraintEnd_toEndOf="@+id/nameValueTextView"
+        app:layout_constraintEnd_toStartOf="@+id/imageView"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/guideLine" />
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toBottomOf="@id/emergencyContactValueTextView"
-        app:layout_constraintEnd_toEndOf="@id/nameValueTextView"
-        app:layout_constraintTop_toTopOf="@id/emergencyContactValueTextView" />
 
     <TextView
         android:id="@+id/warningValueTextView"
@@ -125,8 +127,8 @@
         android:id="@+id/goInputActivity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:clickable="true"
         android:layout_margin="36dp"
+        android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/baseline_edit_24" />
@@ -140,5 +142,13 @@
         app:layout_constraintBottom_toTopOf="@id/goInputActivity"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/baseline_delete_24" />
+
+    <androidx.constraintlayout.helper.widget.Layer
+        android:id="@+id/emergencyContactLayer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:constraint_referenced_ids="imageView,emergencyContactValueTextView"
+        tools:ignore="MissingConstraints" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
