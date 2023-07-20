@@ -97,10 +97,10 @@
         style="@style/Value"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
         android:text="0000-0000-0000"
         app:layout_constraintBaseline_toBaselineOf="@id/emergencyContactTextView"
-        app:layout_constraintEnd_toStartOf="@id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/nameValueTextView"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@id/guideLine" />
 
     <ImageView
@@ -130,5 +130,15 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/baseline_edit_24" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/deleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="36dp"
+        android:clickable="true"
+        app:layout_constraintBottom_toTopOf="@id/goInputActivity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:srcCompat="@drawable/baseline_delete_24" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
